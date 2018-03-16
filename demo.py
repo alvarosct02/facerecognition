@@ -51,7 +51,7 @@ photo = "iVBORw0KGgoAAAANSUhEUgAAAKAAAADICAIAAADgCn1NAAAAA3NCSVQICAjb4U/gAAAgAEl
 # assume data contains your decoded image
 #file_like 
 
-name = "image_" + time.time() + ".jpg"
+name = "image_" + str(time.time()) + ".jpg"
 with open(name, "wb") as fh:
     fh.write(base64.b64decode(photo))
 test = face_recognition.load_image_file(name)
